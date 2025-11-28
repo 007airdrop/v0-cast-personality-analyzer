@@ -9,6 +9,11 @@ import { useActions } from "frames.js/next";
 import { useEffect } from "react";
 
 export default function Home() {
+  const actions = useActions();
+
+  useEffect(() => {
+    actions.ready();
+  }, []);
   const [isSignedIn, setIsSignedIn] = useState(false)
   const [hasAnalyzed, setHasAnalyzed] = useState(false)
 
