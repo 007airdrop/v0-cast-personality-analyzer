@@ -1,7 +1,10 @@
 "use client";
 
-import { useActions } from "farcaster-js";
-import { useEffect } from "react";
+import { useActions } from "frog/next";
+import { useEffect, useState } from "react";
+
+import { SignInScreen } from "@/components/sign-in-screen";
+import { ResultsScreen } from "@/components/results-screen";
 
 export default function Home() {
   const [isSignedIn, setIsSignedIn] = useState(false)
